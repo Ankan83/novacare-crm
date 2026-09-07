@@ -1,0 +1,119 @@
+.doctor-selection{
+    margin-top:18px;
+}
+
+.doctor-selection-title{
+    font-weight:600;
+    margin-bottom:12px;
+    color:#374151;
+}
+
+.doctor-selection-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.doctor-card-option{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    padding:14px 18px;
+
+    transition:.25s;
+}
+
+.doctor-card-option:hover{
+
+    border-color:#2563eb;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+}
+
+.doctor-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.doctor-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+}
+
+.doctor-left h4{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#111827;
+}
+
+.doctor-left p{
+
+    margin-top:4px;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+}
+
+.doctor-select-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:10px;
+
+    padding:9px 16px;
+
+    transition:.2s;
+}
+
+.doctor-select-btn:hover{
+
+    background:#1d4ed8;
+
+}

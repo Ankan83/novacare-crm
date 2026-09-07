@@ -1,0 +1,207 @@
+.crm-insights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.insights-heading,
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.insights-heading h2,
+.insight-card h3 {
+  margin: 0;
+}
+
+.insights-heading p,
+.muted {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 0.84rem;
+}
+
+.insights-loading {
+  color: #2563eb;
+  font-size: 0.78rem;
+}
+
+.insights-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.85rem;
+}
+
+.insights-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.insights-metrics div {
+  padding: 12px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.insights-metrics strong,
+.insights-metrics span {
+  display: block;
+}
+
+.insights-metrics strong {
+  font-size: 1.35rem;
+}
+
+.insights-metrics span,
+.card-title-row span {
+  color: #64748b;
+  font-size: 0.76rem;
+}
+
+.insight-card {
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.warning-card {
+  background: #fffaf0;
+  border-color: #fed7aa;
+}
+
+.success-card {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.insight-card p {
+  line-height: 1.45;
+}
+
+.insight-card ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.topic-list span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.74rem;
+}
+
+.question-list li {
+  margin: 5px 0;
+  font-size: 0.82rem;
+}
+
+.follow-up-list {
+  list-style: none;
+  padding: 0 !important;
+}
+
+.follow-up-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.82rem;
+}
+
+.follow-up-list li > div:first-child {
+  display: grid;
+  gap: 3px;
+}
+
+.follow-up-actions {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.follow-up-actions button,
+.card-title-row button {
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+  padding: 5px 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.7rem;
+}
+
+.follow-up-list span {
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.email-draft-card pre {
+  white-space: pre-wrap;
+  font: inherit;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.email-link {
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.timeline {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 10px;
+}
+
+.timeline-dot {
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.timeline-item strong,
+.timeline-item p,
+.timeline-item small {
+  display: block;
+}
+
+.timeline-item p,
+.timeline-item small {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 0.76rem;
+}
+
+@media (max-width: 600px) {
+  .insights-metrics {
+    grid-template-columns: 1fr;
+  }
+}

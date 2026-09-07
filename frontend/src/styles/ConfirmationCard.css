@@ -1,0 +1,75 @@
+.confirmation-card{
+
+    margin-top:18px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    padding:20px;
+}
+
+.confirmation-card h3{
+
+    margin:0;
+
+    color:#111827;
+}
+
+.confirmation-card p{
+
+    margin:12px 0 18px;
+
+    color:#6b7280;
+}
+
+.confirmation-actions{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.confirm-btn{
+
+    flex:1;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    cursor:pointer;
+}
+
+.edit-btn{
+
+    flex:1;
+
+    border:none;
+
+    background:#f3f4f6;
+
+    color:#111827;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    cursor:pointer;
+}
+
+.confirm-btn:hover{
+    background:#1d4ed8;
+}
+
+.edit-btn:hover{
+    background:#e5e7eb;
+}
