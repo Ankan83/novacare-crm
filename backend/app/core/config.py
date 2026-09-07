@@ -1,6 +1,10 @@
 from functools import lru_cache
 
 from pydantic_settings import BaseSettings, SettingsConfigDict # type: ignore
+from dotenv import load_dotenv
+
+
+load_dotenv("/etc/secrets/.env", override=False)
 
 
 class Settings(BaseSettings):
@@ -27,7 +31,7 @@ class Settings(BaseSettings):
     SMTP_USE_TLS: bool = True
 
     model_config = SettingsConfigDict(
-        env_file=(".env", "/etc/secrets/.env"),
+        env_file=".env",
         extra="ignore",
     )
 
