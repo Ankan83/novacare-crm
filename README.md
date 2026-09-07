@@ -117,3 +117,14 @@ For backend syntax validation:
 cd backend
 .\.venv\Scripts\python.exe -m compileall app
 ```
+
+## Production deployment
+
+The frontend can be deployed on Vercel with `frontend/` as the project root.
+Set `VITE_API_URL` to the deployed API URL followed by `/api`.
+
+The FastAPI service is configured for Railway in `backend/railway.toml`.
+Railway is recommended here because it supports Python services and managed
+MySQL in the same deployment platform. Configure the backend variables from
+`backend/.env.example`, then set the frontend's `VITE_API_URL` to the Railway
+service URL.
