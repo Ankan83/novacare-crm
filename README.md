@@ -123,8 +123,9 @@ cd backend
 The frontend can be deployed on Vercel with `frontend/` as the project root.
 Set `VITE_API_URL` to the deployed API URL followed by `/api`.
 
-The FastAPI service is configured for Railway in `backend/railway.toml`.
-Railway is recommended here because it supports Python services and managed
-MySQL in the same deployment platform. Configure the backend variables from
-`backend/.env.example`, then set the frontend's `VITE_API_URL` to the Railway
-service URL.
+The FastAPI service is configured for Render in the dashboard. Create a
+PostgreSQL database and a Python web service from this repository, set the
+backend root directory to `backend`, and connect the database's
+`DATABASE_URL`. Configure the remaining variables from
+`backend/.env.example`, then set the frontend's `VITE_API_URL` to the Render
+service URL followed by `/api`.

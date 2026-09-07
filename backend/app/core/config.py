@@ -10,13 +10,15 @@ class Settings(BaseSettings):
 
     MODEL_NAME: str = "openai/gpt-oss-120b"
 
-    MYSQL_HOST: str
+    DATABASE_URL: str | None = None
+    MYSQL_HOST: str = "127.0.0.1"
     MYSQL_PORT: int = 3306
-    MYSQL_DATABASE: str
-    MYSQL_USER: str
-    MYSQL_PASSWORD: str
+    MYSQL_DATABASE: str = "ai_crm"
+    MYSQL_USER: str = "crm_user"
+    MYSQL_PASSWORD: str = "crm_password"
 
     FRONTEND_URL: str = "http://localhost:5173"
+    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174"
     SMTP_HOST: str | None = None
     SMTP_PORT: int = 587
     SMTP_USERNAME: str | None = None

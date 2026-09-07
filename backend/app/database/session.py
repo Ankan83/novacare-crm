@@ -4,13 +4,17 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker # type: ignore
 from app.core.config import settings
 
 
-DATABASE_URL = URL.create(
+DATABASE_URL = (
+    settings.DATABASE_URL.replace("postgres://", "postgresql+psycopg2://", 1)
+    if settings.DATABASE_URL
+    else URL.create(
     drivername="mysql+pymysql",
     username=settings.MYSQL_USER,
     password=settings.MYSQL_PASSWORD,
     host=settings.MYSQL_HOST,
     port=settings.MYSQL_PORT,
     database=settings.MYSQL_DATABASE,
+    )
 )
 
 engine = create_engine(
