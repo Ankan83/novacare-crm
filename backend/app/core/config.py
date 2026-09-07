@@ -22,7 +22,12 @@ class Settings(BaseSettings):
     MYSQL_PASSWORD: str = "crm_password"
 
     FRONTEND_URL: str = "http://localhost:5173"
-    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174"
+    CORS_ORIGINS: str = (
+        "http://localhost:5173,http://localhost:5174,"
+        "http://127.0.0.1:5173,http://127.0.0.1:5174,"
+        "https://novacare-crm.vercel.app,"
+        "https://novacare-gn95tmbwz-ankan-rastogis-projects.vercel.app"
+    )
     SMTP_HOST: str | None = None
     SMTP_PORT: int = 587
     SMTP_USERNAME: str | None = None
