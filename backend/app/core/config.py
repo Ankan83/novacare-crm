@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     MODEL_NAME: str = "openai/gpt-oss-120b"
 
-    DATABASE_URL: str | None = None
+    DATABASE_URL: str = "sqlite:///./novacare.db"
     MYSQL_HOST: str = "127.0.0.1"
     MYSQL_PORT: int = 3306
     MYSQL_DATABASE: str = "ai_crm"

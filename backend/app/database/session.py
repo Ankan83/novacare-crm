@@ -4,21 +4,17 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker # type: ignore
 from app.core.config import settings
 
 
-DATABASE_URL = (
-    settings.DATABASE_URL.replace("postgres://", "postgresql+psycopg2://", 1)
-    if settings.DATABASE_URL
-    else URL.create(
-    drivername="mysql+pymysql",
-    username=settings.MYSQL_USER,
-    password=settings.MYSQL_PASSWORD,
-    host=settings.MYSQL_HOST,
-    port=settings.MYSQL_PORT,
-    database=settings.MYSQL_DATABASE,
-    )
-)
+DATABASE_URL = settings.DATABASE_URL
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+psycopg2://", 1)
+elif DATABASE_URL.startswith("mysql://"):
+    DATABASE_URL = DATABASE_URL.replace("mysql://", "mysql+pymysql://", 1)
+
+connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
 
 engine = create_engine(
     DATABASE_URL,
+    connect_args=connect_args,
     pool_pre_ping=True,
     echo=False,
 )

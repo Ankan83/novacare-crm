@@ -123,9 +123,10 @@ cd backend
 The frontend can be deployed on Vercel with `frontend/` as the project root.
 Set `VITE_API_URL` to the deployed API URL followed by `/api`.
 
-The FastAPI service is configured for Render in the dashboard. Create a
-PostgreSQL database and a Python web service from this repository, set the
-backend root directory to `backend`, and connect the database's
-`DATABASE_URL`. Configure the remaining variables from
-`backend/.env.example`, then set the frontend's `VITE_API_URL` to the Render
+The FastAPI service can run on Render's free web-service tier. Set the backend
+root directory to `backend` and configure the variables from
+`backend/.env.example`. The free configuration uses SQLite, which is suitable
+for demos but resets when the service is redeployed or restarted. For
+persistent production data, set `DATABASE_URL` to a hosted PostgreSQL
+connection string. Then set the frontend's `VITE_API_URL` to the Render
 service URL followed by `/api`.
