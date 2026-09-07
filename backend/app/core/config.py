@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     SMTP_USE_TLS: bool = True
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", "/etc/secrets/.env"),
         extra="ignore",
     )
 
